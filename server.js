@@ -20,6 +20,14 @@ const io=socketio(server);
 
 io.on("connection",socket=>{
     console.log("connection established");
+    // console.log(socket.id)
+
+
+
+    
+    socket.on("disconnect",()=>{
+        console.log("connection lost");
+    })
 
 
 });
