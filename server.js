@@ -1,4 +1,8 @@
 const express=require('express')
+const socketio=require('socket.io')
+const http=require('http');
+
+
 
 
 app=express()
@@ -6,11 +10,24 @@ app=express()
 app.use(express.urlencoded({extended: false}))
 
 
+const server=http.createServer(app);
+
+const io=socketio(server);
+
+io.on("connection",socket=>{
+    console.log("connection established");
+
+
+});
+
+io.on("message",message=>{
+    console.log(message);
+});
+
 
 app.get('/',(req,res)=>{
-    console.log("hi");
-    res.sendStatus(200);
+    res.render('index');
 })
 
 
-app.listen(5000);
+server.listen(5000);
