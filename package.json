@@ -9,6 +9,7 @@
   "author": "Kota Sai Durga Kamesh",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "socket.io": "^3.0.4"
