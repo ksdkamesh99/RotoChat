@@ -1,11 +1,16 @@
 const express=require('express')
-const http=require('http')
+
 
 app=express()
 
-const server=http.createServer(app)
+app.use(express.urlencoded({extended: false}))
 
 
-server.listen(5000,()=>{
-    console.log("Server running");
-});
+
+app.get('/',(req,res)=>{
+    console.log("hi");
+    res.sendStatus(200);
+})
+
+
+app.listen(5000);
