@@ -1,0 +1,11 @@
+{
+  "name": "rotochat",
+  "version": "1.0.0",
+  "description": "It is a real time room chat app built using node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kota Sai Durga Kamesh",
+  "license": "ISC"
+}
