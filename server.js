@@ -1,7 +1,11 @@
 const express=require('express')
+const http=require('http')
 
 app=express()
 
-app.listen(5000,()=>{
+const server=http.createServer(app)
+
+
+server.listen(5000,()=>{
     console.log("Server running");
 });
