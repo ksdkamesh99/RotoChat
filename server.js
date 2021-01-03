@@ -9,6 +9,7 @@ app=express()
 
 app.use(express.urlencoded({extended: false}))
 
+app.set('view engine','ejs');
 
 const server=http.createServer(app);
 
